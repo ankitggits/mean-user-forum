@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+	<h1>All Boards Of User</h1>
+	<table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>MaxPostAllowed</th>
+              <th>Public</th>
+              <th>&nbsp;</th>
+              <th>Action</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="cursor: pointer"><input style="cursor: pointer" class="form-control" ng-model="board.title"></div></td>
+              <td><input class="form-control" ng-model="board.allowedPosts"></td>
+              <td><input type="checkbox" ng-model="board.isPublic"></td>
+               <td><button class="btn btn-primary" ng-click="addBoard()">Add Board</button></td>
+          		<td><button class="btn btn-info" ng-click="update()">Update</button></td>
+          		<td><button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+            </tr>
+            <tr ng-repeat="board in boardlist">
+              <td>{{board.title}}</td>
+              <td>{{board.allowedPosts}}</td>
+              <td>{{board.isPublic}}</td>
+               <td><button class="btn btn-danger" ng-click="remove(board._id)">Remove</button></td>
+              <td><button class="btn btn-warning" ng-click="edit(board._id)">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+</div>

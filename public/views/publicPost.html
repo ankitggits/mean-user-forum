@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+  <h1>Posts</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Content</th>  
+          <th>Action</th>      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3"><textarea placeholder="Add text here" ng-model="post.content" class="w3-input w3-border w3-padding" ></textarea></td>
+          <td><button class="btn btn-primary" ng-click="addPost()">Add Post</button></td>
+          <td><button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="post in postList">
+          <td>{{post.content}}</td>         
+        </tr>
+      </tbody>
+    </table>
+</div>

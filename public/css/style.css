@@ -1,0 +1,22 @@
+#sortable {
+ 		list-style-type: none; 
+ 		margin: 0; 
+ 		padding: 0; 
+ 		width: 1000px; 
+ 	}
+
+#sortable li {
+		margin: 10px 10px 10px 20px;
+		padding: 1px;
+		float: left;
+		width: 150px;
+		height: 90px;
+		font-size: 2em;
+		text-align: center;
+	}
+
+body { padding-top:30px; }
+.error{
+    color: red;
+    border-color:red;
+}

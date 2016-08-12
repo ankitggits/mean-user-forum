@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Starter Node and Angular</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <!-- JS -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-cookies/angular-cookies.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/HomeCtrl.js"></script>
+    <script src="js/controllers/UserCtrl.js"></script>
+    <script src="js/controllers/BoardCtrl.js"></script>
+    <script src="js/controllers/PublicBoardCtrl.js"></script>
+    <script src="js/controllers/AdminBoardCtrl.js"></script>
+    <script src="js/controllers/PostCtrl.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="sampleApp" ng-controller="HomeController">
+<div class="container">
+    
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+             <a ng-show="isLoggedInFun() && !isAdminFun()" class="navbar-brand" href="/#/boardUserPage" >Welcome {{loggedUserName}}</a>
+             <a ng-show="isLoggedInFun() && isAdminFun()" class="navbar-brand" href="/#/userPage">Welcome Admin</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ng-show="isLoggedInFun() && !isAdminFun()" href="/#/boardUserPage">Manage your Boards</a></li>
+            <li ng-show="isLoggedInFun() && !isAdminFun()"><a href="/#/publicBoardPage">Public Boards</a></li>
+            <li ng-show="isLoggedInFun()"><a href="/" ng-click="logoutUser()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view></div>
+
+</div>
+</body>
+</html>

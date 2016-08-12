@@ -1,0 +1,13 @@
+{
+	"name": "angular",
+	"version": "1.0.0",
+	"dependencies": {
+		"bootstrap": "latest",
+		"bootstrap-toggle":"latest",
+		"angular": "latest",
+		"angular-route": "latest",
+		"jquery":"latest",
+		"jquery-ui":"latest",
+		"angular-cookies":"latest"
+	}
+}
