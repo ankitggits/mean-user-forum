@@ -16,13 +16,13 @@ app.use(passport.session());
 var mongoose = require('mongoose');
 var UserModel = require('./app/models/UserModel.js');
 
-/*mongoose.connect(dbConfig.url, function(err) {
+mongoose.connect(dbConfig.url, function(err) {
     if(err) {
         console.log('connection error', err);
     } else {
         console.log('connection successful');
     }
-});*/
+});
 
 var usersRoute = require('./app/routes/users');
 var boardsRoute = require('./app/routes/boards');
@@ -91,5 +91,5 @@ app.use(function(err, req, res, next) {
 });
 
 
-//app.listen(3000);
+app.listen(3000);
 console.log("Server running on port 3000");
