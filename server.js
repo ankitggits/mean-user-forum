@@ -91,5 +91,5 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(config.port);
-console.log("Server running on port "+config.port);
+app.listen($port);
+console.log("Server running on port "+$port);
