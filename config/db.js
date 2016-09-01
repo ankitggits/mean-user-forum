@@ -1,3 +1,3 @@
 module.exports = {
-  'url' : 'mongodb://localhost/forum'
+  'url' : 'mongodb://admin:admin@ds021026.mlab.com:21026/heroku_pvfl6z40'
 }
