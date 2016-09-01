@@ -91,5 +91,5 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(3000);
-console.log("Server running");
+app.listen(process.env.PORT || 80);
+console.log("Server running on "+ process.env.PORT || 8080);
