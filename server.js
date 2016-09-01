@@ -18,9 +18,9 @@ var UserModel = require('./app/models/UserModel.js');
 
 mongoose.connect(dbConfig.url, function(err) {
     if(err) {
-        console.log('connection error', err);
+        console.log('mongo connection error', err);
     } else {
-        console.log('connection successful');
+        console.log('mongo connection successful');
     }
 });
 
