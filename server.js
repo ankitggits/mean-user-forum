@@ -72,7 +72,7 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+if (app.get('env') === 'development' || app.get('env') === 'production') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     console.error(err);
@@ -91,5 +91,5 @@ app.use(function(err, req, res, next) {
 });
 
 
-//app.listen(3000);
+app.listen(3000);
 console.log("Server running on port 3000");
